@@ -6,6 +6,7 @@ namespace TuringTest
 {
    class Solution
     {
+        //SOLUTION ONE
         public int CalPoints(string[] ops)
         {
             var newList = new List<int>(); int[] ints;
@@ -30,6 +31,7 @@ namespace TuringTest
             return ints.Sum();
         }
 
+        //SOLUTION TWO
         public bool IsValid(string s)
         {
             var array = s.ToCharArray();
@@ -48,9 +50,17 @@ namespace TuringTest
         static void Main(string[] args)
         {
             Solution solution = new Solution();
+
+            //PROBLEM TWO
             if (solution.IsValid(Console.ReadLine())) Console.WriteLine("valid");
             else Console.WriteLine("invalid");
-            
+
+
+            //PROBLEM ONE
+            //char[] space = new char[' '];
+            //string[] ops = Console.ReadLine().Split(space);
+            //int output = solution.CalPoints(ops);
+            //Console.WriteLine(output.ToString());
         }
     }
 }
